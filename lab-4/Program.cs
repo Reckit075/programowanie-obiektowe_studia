@@ -22,7 +22,7 @@ namespace lab_4
             Degree ocena = Degree.BardzoDobry;
             Console.WriteLine(ocena);
             string[] vs = Enum.GetNames<Degree>();
-            Console.WriteLine(string.Join(",",vs));
+            Console.WriteLine(string.Join(",", vs));
 
             Degree[] degrees = Enum.GetValues<Degree>();
             foreach (Degree i in degrees)
@@ -44,15 +44,15 @@ namespace lab_4
                 Console.WriteLine("wpisales nieznana ocenę");
             }
             string usDegree;
-            switch(ocena)
+            switch (ocena)
             {
-                case  Degree.BardzoDobry:
-                usDegree = "A";
-                break;
+                case Degree.BardzoDobry:
+                    usDegree = "A";
+                    break;
 
                 case Degree.Dobry:
-                usDegree = "B";
-                break;
+                    usDegree = "B";
+                    break;
             }
             usDegree = ocena switch
             {
@@ -69,7 +69,7 @@ namespace lab_4
 
             int points = 57;
             Degree result;
-            if(points >= 50 && points< 60)
+            if (points >= 50 && points < 60)
             {
                 result = Degree.Dostateczny;
             }
@@ -96,25 +96,25 @@ namespace lab_4
             Console.WriteLine(students[1] == new Student("Ewa", 123, "E");
 
             foreach (Student oneStudent in students)
-	        {
-                Console.WriteLine(oneStudent);
-	        };
+            {
+                Console.WriteLine(student);
+            };
 
             (string, bool)[] results = new (string, bool)[students.Length];
             for (int i = 0; i < students.Length; i++)
-			{
+            {
                 Student st = students[i];
-                results[i] = (st.Name,
+                result[i] = (st.Name
                     st switch
                     {
-                        { Points: >= 100, Group:"E"} => true,
-                        { Points: >= 65, Group:"C"} => true,
-                        { Points: >= 35, Group:"Q"} => true,
-                        _=> false
-                    }
+                        { Points: >= 100, Group: "E" } => true,
+                        { Points: >= 65, Group: "C" } => true,
+                        { Points: >= 35, Group: "Q" } => true,
+                        _ => false
+                    };
                 )
 			}
-            
-        }
+
     }
+}
 }
