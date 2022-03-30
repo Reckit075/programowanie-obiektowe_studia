@@ -93,26 +93,26 @@ namespace lab_4
                 new Student(Name:"Sławomir", Points: 35, Group: "Q"),
             };
 
-            Console.WriteLine(students[1] == new Student("Ewa", 123, "E");
+            Console.WriteLine(students[1] == new Student("Ewa", 123, "E"));
 
             foreach (Student oneStudent in students)
             {
-                Console.WriteLine(student);
+                Console.WriteLine(students);
             };
 
             (string, bool)[] results = new (string, bool)[students.Length];
             for (int i = 0; i < students.Length; i++)
             {
                 Student st = students[i];
-                result[i] = (st.Name
+                results[i] = (st.Name,
                     st switch
                     {
                         { Points: >= 100, Group: "E" } => true,
                         { Points: >= 65, Group: "C" } => true,
                         { Points: >= 35, Group: "Q" } => true,
                         _ => false
-                    };
-                )
+                    }
+                );
 			}
 
     }
